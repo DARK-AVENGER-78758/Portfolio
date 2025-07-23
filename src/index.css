@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 23% 6%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 197 100% 60%;
+    --primary-foreground: 220 23% 6%;
+
+    --secondary: 220 14% 12%;
+    --secondary-foreground: 210 40% 85%;
+
+    --muted: 220 14% 12%;
+    --muted-foreground: 215 16% 50%;
+
+    --accent: 220 14% 15%;
+    --accent-foreground: 210 40% 85%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 14% 15%;
+    --input: 220 14% 15%;
+    --ring: 197 100% 60%;
+
+    --radius: 0.75rem;
+    
+    /* Custom design tokens */
+    --primary-glow: 197 100% 70%;
+    --accent-bright: 45 100% 65%;
+    --text-dim: 215 16% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(220 20% 8%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px -5px hsl(220 23% 3% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode uses same colors since we're already dark */
+    --accent-bright: 45 100% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Utility classes */
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glow-effect {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.8s ease-out;
+}
+
+.fade-up {
+  animation: fade-up 0.8s ease-out;
+}
