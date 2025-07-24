@@ -74,24 +74,21 @@ const EducationSection = () => {
       issuer: 'Microsoft',
       date: '2024',
       icon: Award,
-      color: 'text-blue-400',
-      credentialId: 'MS-AI-900'
+      color: 'text-blue-400'
     },
     {
       title: 'IBM AI Engineering Professional Certificate',
       issuer: 'IBM',
       date: '2023',
       icon: Trophy,
-      color: 'text-purple-400',
-      credentialId: 'IBM-AI-ENG-2023'
+      color: 'text-purple-400'
     },
     {
       title: 'Accenture Digital Marketing Certificate',
       issuer: 'Accenture',
       date: '2023',
       icon: Star,
-      color: 'text-green-400',
-      credentialId: 'ACC-DM-2023'
+      color: 'text-green-400'
     }
   ];
 
@@ -242,7 +239,7 @@ const EducationSection = () => {
                     </p>
                     
                     <div className="text-xs text-text-dim">
-                      ID: {cert.credentialId}
+                      <a href = "https://drive.google.com/drive/folders/1cMgH7GUoLFMMTBSQfuIq-OYpIX1ygD6m?usp=sharing">View Certificates</a>
                     </div>
                   </Card>
                 </div>

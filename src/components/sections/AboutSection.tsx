@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { User, MapPin, Calendar, Award } from 'lucide-react';
+import profilePic from '@/assets/Web_Photo_Editor.jpg';
 
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -113,7 +114,7 @@ const AboutSection = () => {
                   {/* Profile Image Placeholder */}
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary">
                     <img
-                      src="public\Images\Web_Photo_Editor.jpg" // replace with your image path
+                      src= {profilePic} // replace with your image path
                       alt="Gadhiraju Anirudh Varma"
                       className="w-full h-full object-cover"
                     />
