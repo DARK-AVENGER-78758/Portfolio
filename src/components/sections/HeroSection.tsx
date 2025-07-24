@@ -99,7 +99,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="group glow-effect hover:scale-105 transition-all duration-300"
               >
-                <a href="public\Images\Anirudh_Varma_resume.pdf" download>
+                <a href="/Anirudh_Varma_resume.pdf" download>
                   <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                   Download Resume
                 </a>
