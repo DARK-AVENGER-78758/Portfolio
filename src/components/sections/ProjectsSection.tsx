@@ -45,9 +45,9 @@ const ProjectsSection = () => {
       highlights: ['Webhooks', 'scalable workflow', 'API-first design']
     },
     {
-      title: 'Flight Fare Prediction and Analysis Using Power BI',
-      description: 'Built predictive models using Linear Regression and Random Forest Regressor, Designed a Power BI dashboard to visualize fare trends, routes, and pricing insights',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'Power BI', 'Jupyter Notebook'],
+      title: 'Amazon Product Reviews ETL Pipeline',
+      description: 'Built a modular ETL pipeline for real-time product reviews via RapidAPI. Integrated with MongoDB for scalable analysis',
+      tech: ['Python', 'Pandas', 'MongoDB', 'REST APIs'],
       icon: Code,
       color: 'text-green-400',
       status: 'Completed',

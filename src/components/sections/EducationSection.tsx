@@ -26,7 +26,7 @@ const EducationSection = () => {
   const education = [
     {
       institution: 'VIT Vellore',
-      degree: 'Bachelor of Technology',
+      degree: 'Integrated Master of Technology',
       specialization: 'Computer Science and Engineering',
       duration: '2021 - 2026',
       location: 'Vellore, Tamil Nadu',
